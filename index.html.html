@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://icacerola.cl/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Cacerolazo Dominicano 2020</title>
+	<meta name="title" content="#Cacerolazo">
+	<meta name="description" content="SeVan! Votemos todos">
+	<meta name="keywords" content="cacerolazo, despierta, republica dominicana, vota, no a la corrupcion">
+	<meta name="robots" content="index, follow">
+	
+	<meta name="language" content="Spanish">
+
+    <meta property="og:title" content="#Cacerolazo">
+    <meta property="og:type" content="website">
+
+<link rel="stylesheet" type="text/css" href="./Cacerolazo_files/csshake-slow.min.css">
+
+<style type="text/css">
+	html,
+	body {
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	}
+
+	div {
+	  position: relative;
+	  height: 100%;
+	  width: 100%;
+	}
+
+	div img {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  margin: auto;
+	  width: 100%;
+	  max-width: 400px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		div img {
+			max-width: 600px;
+		}
+	}
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics CSAC-->
+<script type="text/javascript" async="" src="./Cacerolazo_files/analytics.js.download"></script><script async="" src="./Cacerolazo_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150865073-1');
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.onload=function(){
+      
+    document.getElementById('play').addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        myAudio = document.getElementById('audio'); 
+
+        myAudio.ontimeupdate= function(i) {
+            if((this.currentTime / this.duration)>0.99){
+                this.currentTime = 2;
+                this.play();
+            }
+        };
+    
+   	    if (myAudio.paused) {
+            myAudio.play();
+            toggleClass(document.getElementById('cacerola'), 'shake-slow');
+        }
+        else {
+            myAudio.pause();
+            toggleClass(document.getElementById('cacerola'), 'shake-slow');
+        }
+    });
+
+
+    function toggleClass(element, tClass) {
+        tClass = tClass.replace(/\s/g, "");
+
+        var classes =  element.className;
+        element.className = classes.indexOf(tClass) !== -1 
+            ? classes.replace(" " + tClass, "")
+            : classes + " " + tClass;
+    }
+}
+
+  //]]>
+</script>
+
+</head>
+<body>
+
+<audio id="audio" preload="" loop="">
+  <source src="https://www.icacerola.cl/cacerolazo3.mp3" type="audio/mpeg">
+  <source src="https://www.icacerola.cl/cacerolazo3.ogg" type="audio/ogg">
+</audio>
+
+<div id="cacerola" class="shake-constant shake-slow"><a href="https://icacerola.cl/#" id="play"><img src="./Cacerolazo_files/cacerola.jpg"></a></div>
+
+
+</body></html>
